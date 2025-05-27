@@ -1,60 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-color-scheme="auto">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ComicSpinnah</title>
+  <title>ComicSpinnah | Overview</title>
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Favicon support -->
-  <link rel="icon" type="image/png" sizes="256x256" href="assets/icons/favicon.png">
-  <link rel="apple-touch-icon" href="assets/icons/favicon.png">
-
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Organize, tag, and read your digital comic book collection with ComicSpinnah. Coming in 2025." />
-  
-  <!-- Open Graph Meta Tags -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://comicspinnah.com/" />
-  <meta property="og:title" content="ComicSpinnah" />
-  <meta property="og:description" content="Organize, tag, and read your digital comic book collection with ComicSpinnah. Coming in 2025." />
-  <meta property="og:image" content="https://comicspinnah.com/assets/logo/comicspinnah-macos-icon.png" />
-  
-  <!-- Twitter Card Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="https://comicspinnah.com/" />
-  <meta name="twitter:title" content="ComicSpinnah" />
-  <meta name="twitter:description" content="Organize, tag, and read your digital comic book collection with ComicSpinnah. Coming in 2025." />
-  <meta name="twitter:image" content="https://comicspinnah.com/assets/logo/comicspinnah-macos-icon.png" />
-  
 </head>
 <body>
-  <header>
-    <div class="menu">
-      <img src="assets/icons/menu.svg" alt="Menu" title="Menu" />
+  <header class="site-header">
+    <div class="header-content">
+      <img src="assets/comicspinnah-macos-icon.png" alt="App Icon" class="app-icon" />
+      <span class="app-name">ComicSpinnah</span>
+      <nav class="site-nav">
+        <a href="index.html" class="active">Overview</a>
+        <a href="whats-new.html">What's New</a>
+        <a href="blog.html">Blog</a>
+        <a href="https://github.com/ShastLeLow/comicspinnah-app/issues" target="_blank" rel="noopener">GitHub</a>
+      </nav>
     </div>
   </header>
 
   <main>
-    <img src="assets/logo/comicspinnah-macos-icon.png" alt="ComicSpinnah Logo" class="app-logo" />
-    <h1>ComicSpinnah</h1>
-    <p class="tagline">Coming in 2025.</p>
+    <section class="hero-section">
+      <div class="hero-text">
+        <h1>A modern macOS app<br>for collectors and creators</h1>
+        <p>Organize, tag, and read your comics — offline or with Komga</p>
+        <div class="coming-soon">Coming Soon. Exclusively on the App Store.</div>
+      </div>
+
+      <!-- Previous scroll animation block commented out for easy reversion -->
+      <!--
+      <div class="hero-visual" id="scroll-container">
+        <div class="scroll-zoom-wrapper">
+          <img src="assets/comicspinnah-screenshot.png" class="zoom-screenshot" alt="ComicSpinnah Screenshot" />
+          <img src="assets/app-on-mbp.png" class="macbook-frame" alt="App in MacBook Pro" />
+        </div>
+      </div>
+      -->
+
+      <div class="hero-static">
+        <img src="assets/app-on-macbook-pro-desktop-blur.png" alt="App Screenshot on MacBook" />
+      </div>
+    </section>
   </main>
 
-  <footer>
-    <div class="socials">
-      <a href="https://www.reddit.com/r/comicspinnah/" target="_blank"><img src="assets/icons/reddit.svg" alt="Reddit Community" title="Reddit Community" /></a>
-      <a href="https://x.com/comicspinnah" target="_blank"><img src="assets/icons/x.svg" alt="X (Twitter)" title="X (Twitter)" /></a>
-      <a href="https://www.tiktok.com/@comicspinnah" target="_blank"><img src="assets/icons/tiktok.svg" alt="TikTok" title="TikTok" /></a>
-      <a href="https://www.instagram.com/comicspinnah" target="_blank"><img src="assets/icons/instagram.svg" alt="Instagram" title="Instagram" /></a>
-      <a href="https://www.threads.net/@comicspinnah" target="_blank"><img src="assets/icons/threads.svg" alt="Threads" title="Threads" /></a>
-      <a href="https://www.facebook.com/comicspinnah" target="_blank"><img src="assets/icons/facebook.svg" alt="Facebook" title="Facebook" /></a>
-      <a href="https://www.youtube.com/@comicspinnah" target="_blank"><img src="assets/icons/youtube.svg" alt="YouTube" title="YouTube" /></a>
-      <a href="https://www.snapchat.com/add/comicspinnah" target="_blank"><img src="assets/icons/snapchat.svg" alt="Snapchat" title="Snapchat" /></a>
-      <a href="https://bsky.app/profile/comicspinnah.bsky.social" target="_blank"><img src="assets/icons/bluesky.svg" alt="Bluesky" title="Bluesky" /></a>
-      <a href="mailto:info@comicspinnah.com"><img src="assets/icons/paperplane.svg" alt="Email Us" title="Email Us" /></a>
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="copyright">
+        &copy; 2025 ComicSpinnah. All rights reserved.
+      </div>
+      <div class="theme-toggle">
+        <button class="theme-btn" data-mode="light">Light</button>
+        <button class="theme-btn" data-mode="dark">Dark</button>
+        <button class="theme-btn active" data-mode="auto">Auto</button>
+      </div>
     </div>
-    <div class="footer-note">© ComicSpinnah 2025. All rights reserved.</div>
   </footer>
+  <script src="main.js"></script>
 </body>
 </html>

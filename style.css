@@ -1,189 +1,224 @@
-/* === COMICSPINNAH HOMEPAGE STYLES === */
+
+:root {
+  --bg: #fff;
+  --fg: #000;
+  --accent: #0071e3;
+  --meta: #666;
+  --gray: #f5f5f7;
+  --pill: #e5e5ea;
+  --pill-active: var(--accent);
+  --pill-text: #000;
+}
+
+html[data-color-scheme='dark'] {
+  --bg: #000;
+  --fg: #fff;
+  --accent: #2997ff;
+  --meta: #aaa;
+  --gray: #1d1d1f;
+  --pill: #333;
+  --pill-text: #fff;
+}
 
 body {
   margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  background: linear-gradient(180deg, #7a1717 0%, #b22222 40%, #7a1717 100%);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-/* Global link reset */
-a {
-  color: inherit;
-  text-decoration: none;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
 }
 
 /* HEADER */
-header {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 1rem 2rem;
-}
-
-.menu {
-  display: none; /* hide on desktop */
-}
-
-.menu img {
-  width: 28px;
-  height: 28px;
-  filter: brightness(0) invert(1);
-  transition: filter 0.2s ease, box-shadow 0.2s ease;
-}
-
-.menu img:hover {
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
-}
-
-/* MAIN */
-main {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 2rem 1rem;
-}
-
-.app-logo {
-  width: 256px;
-  height: auto;
-  margin: 0 auto 2rem;
-  filter: blur(15px);
-  opacity: 0.5;
-  transition: filter 0.5s ease, opacity 0.5s ease;
-}
-
-main h1 {
-  font-size: 4rem;
-  margin: 0;
-}
-
-.tagline {
-  font-size: 1.5rem;
-  margin-top: 1rem;
-}
-
-/* FOOTER */
-footer {
-  padding: 1.5rem 1rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-footer .socials {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 0.75rem;
+.site-header {
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  border-bottom: 1px solid #ccc;
   padding: 0.5rem 1rem;
-  box-sizing: border-box;
-  max-width: 800px;
+  z-index: 10;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.app-icon {
+  height: 28px;
+  width: 28px;
+}
+
+.app-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* NAVIGATION */
+.site-nav {
+  margin-left: auto;
+  display: flex;
+  gap: 1rem;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: var(--fg);
+  font-weight: 300;
+  font-size: 0.9rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.site-nav a:hover {
+  background: var(--gray);
+}
+
+.site-nav a.active {
+  font-weight: 600;
+}
+
+/* HERO SECTION */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  padding-top: 3rem;
+}
+
+.hero-text {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+  z-index: 2;
+  position: relative;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  color: var(--meta);
   margin-bottom: 1rem;
 }
 
-footer .socials img {
-  width: 28px;
-  height: 28px;
-  filter: brightness(0) invert(1);
-  transition: filter 0.2s ease, box-shadow 0.2s ease;
-}
-
-footer .socials img:hover {
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
-}
-
-.footer-note {
+.coming-soon {
+  display: inline-block;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  background: var(--gray);
+  color: var(--fg);
+  border-radius: 999px;
   font-size: 0.9rem;
-  color: #eee;
 }
 
-/* MOBILE */
-@media (max-width: 600px) {
-  .menu {
-    display: block;
-    align-self: center;
-  }
-
-  .menu img {
-    width: 24px;
-    height: 24px;
-  }
-
-  footer .socials img {
-    width: 24px;
-    height: 24px;
-  }
-
-  .app-logo {
-    width: 180px;
-  }
-
-  main h1 {
-    font-size: 3rem;
-  }
-
-  .tagline {
-    font-size: 1.2rem;
-  }
-}
-
-/* === COMICSPINNAH 404 PAGE STYLES === */
-
-.error-page {
+/* VISUAL SECTION */
+.hero-visual {
+  position: relative;
+  height: 220vh;
+  margin-top: 4rem;
   display: flex;
-  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.scroll-zoom-wrapper {
+  position: sticky;
+  top: 10vh;
+  width: 100%;
+  max-width: 1200px;
+  z-index: 1;
+  display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(180deg, #7a1717 0%, #b22222 40%, #7a1717 100%);
-  color: white;
-  text-align: center;
-  min-height: 100vh;
+  height: 100vh;
 }
 
-.error-content {
-  padding: 2rem 1rem;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.zoom-screenshot {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%) scale(1);
+  width: 80%;
+  z-index: 2;
+  transition: transform 0.3s ease-out;
 }
 
-.error-image {
-  max-width: 90vw;
-  max-height: 70vh;
-  width: auto;
+.macbook-frame {
+  width: 100%;
   height: auto;
-  object-fit: contain;
-  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
 }
 
-.error-quote {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+/* FOOTER */
+.site-footer {
+  padding: 2rem 1rem;
+  background: var(--bg);
+  color: var(--meta);
+  font-size: 0.9rem;
+  border-top: 1px solid #ccc;
 }
 
-.return-home {
-  padding: 0.75rem 1.5rem;
-  background-color: #ffffff;
-  color: #7a1717;
-  font-weight: bold;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background-color 0.3s ease, color 0.3s ease;
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
-.return-home:hover {
-  background-color: #e0e0e0;
-  color: #5a1010;
+.theme-toggle {
+  display: flex;
+  gap: 0.25rem;
+  background: var(--pill);
+  padding: 4px;
+  border-radius: 999px;
+}
+
+.theme-btn {
+  background: none;
+  border: none;
+  font-size: 0.8rem;
+  padding: 4px 12px;
+  border-radius: 999px;
+  color: var(--pill-text);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.theme-btn.active {
+  background: var(--pill-active);
+  color: white;
+}
+.hero-static {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+
+.hero-static img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure hero-static image is clean */
+.hero-static img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: none;
+  box-shadow: none;
+  background: transparent;
 }
