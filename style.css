@@ -222,3 +222,43 @@ body {
   box-shadow: none;
   background: transparent;
 }
+
+/* --- HAMBURGER MENU FOR MOBILE --- */
+
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  margin-left: auto;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: var(--fg);
+}
+
+@media (max-width: 768px) {
+  .site-nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 1rem;
+    flex-direction: column;
+    background: var(--bg);
+    border: 1px solid #ccc;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+
+  .site-nav a {
+    font-size: 1rem;
+    padding: 0.5rem 0;
+  }
+
+  .site-nav.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}

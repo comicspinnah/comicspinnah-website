@@ -24,3 +24,11 @@ themeButtons.forEach(btn => {
 
 //   zoomImg.style.transform = `translateX(-50%) translateY(${translateY}%) scale(${scale})`;
 // });
+
+// Hamburger menu toggle
+const hamburger = document.getElementById('hamburger');
+const siteNav = document.getElementById('site-nav');
+
+hamburger.addEventListener('click', () => {
+  siteNav.classList.toggle('active');
+});
