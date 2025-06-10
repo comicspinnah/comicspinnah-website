@@ -262,3 +262,16 @@ body {
     display: block;
   }
 }
+.hero-static {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-static img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  z-index: 1;
+  position: relative;
+}
